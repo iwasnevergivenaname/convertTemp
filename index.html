@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>temp</title>
+</head>
+<h2>convert temp</h2>
+<p>convert F to C:</p>
+
+<p>
+  <label>example</label>
+  <input id="inputFahrenheit" type="number" placeholder="fahrenheit"
+         oninput="tempConverter(this.value)" onchange="tempConverter(this.value)">
+</p>
+
+<p>celcius: <span id="outputCelcius"></span></p>
+
+<button onclick="document.getElementById('inputFahrenheit').value = ''">clear</button>
+
+<script>
+  function tempConverter(val) {
+  document.getElementById("outputCelcius").innerHTML=(val-32)/1.8;
+}
+</script>
+
+</body>
+</html>
